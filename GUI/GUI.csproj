@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3243C9D5-E4A3-4E81-A296-58020DD5A2B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Diagram.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.SpellChecker.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.UI, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.Wizard, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDiagram.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpellChecker.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExpressionMethod.cs" />
+    <Compile Include="FormChucNang\FormDanhSachDatTruoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChucNang\FormDanhSachDatTruoc.Designer.cs">
+      <DependentUpon>FormDanhSachDatTruoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChucNang\FormLienHeDatTruoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChucNang\FormLienHeDatTruoc.Designer.cs">
+      <DependentUpon>FormLienHeDatTruoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChucNang\FormThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChucNang\FormThanhToan.Designer.cs">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChucNang\FormThemDatTruoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChucNang\FormThemDatTruoc.Designer.cs">
+      <DependentUpon>FormThemDatTruoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChucNang\FormThemDiaBS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChucNang\FormThemDiaBS.Designer.cs">
+      <DependentUpon>FormThemDiaBS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChucNang\FormThemKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChucNang\FormThemKH.Designer.cs">
+      <DependentUpon>FormThemKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChucNang\FormThemTD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChucNang\FormThemTD.Designer.cs">
+      <DependentUpon>FormThemTD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDichVu\FormDatTruoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDichVu\FormDatTruoc.Designer.cs">
+      <DependentUpon>FormDatTruoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDichVu\FormThueDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDichVu\FormThueDia.Designer.cs">
+      <DependentUpon>FormThueDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDichVu\FormTraDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDichVu\FormTraDia.Designer.cs">
+      <DependentUpon>FormTraDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLy\FormCD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLy\FormCD.Designer.cs">
+      <DependentUpon>FormCD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLy\FormKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLy\FormKhachHang.Designer.cs">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLy\FormLoaiDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLy\FormLoaiDia.Designer.cs">
+      <DependentUpon>FormLoaiDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLy\FormTieuDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLy\FormTieuDe.Designer.cs">
+      <DependentUpon>FormTieuDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLy\FormBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLy\FormBaoCao.Designer.cs">
+      <DependentUpon>FormBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormChucNang\FormDanhSachDatTruoc.resx">
+      <DependentUpon>FormDanhSachDatTruoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChucNang\FormLienHeDatTruoc.resx">
+      <DependentUpon>FormLienHeDatTruoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChucNang\FormThanhToan.resx">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChucNang\FormThemDatTruoc.resx">
+      <DependentUpon>FormThemDatTruoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChucNang\FormThemDiaBS.resx">
+      <DependentUpon>FormThemDiaBS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChucNang\FormThemKH.resx">
+      <DependentUpon>FormThemKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChucNang\FormThemTD.resx">
+      <DependentUpon>FormThemTD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDichVu\FormDatTruoc.resx">
+      <DependentUpon>FormDatTruoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDichVu\FormThueDia.resx">
+      <DependentUpon>FormThueDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDichVu\FormTraDia.resx">
+      <DependentUpon>FormTraDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLy\FormBaoCao.resx">
+      <DependentUpon>FormBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLy\FormCD.resx">
+      <DependentUpon>FormCD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLy\FormKhachHang.resx">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLy\FormLoaiDia.resx">
+      <DependentUpon>FormLoaiDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLy\FormTieuDe.resx">
+      <DependentUpon>FormTieuDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cd_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cd_641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_tv_show_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_google_cloud_platform_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_dyndns_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_services_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c35e3c1baa7be93127b11f5e2de8ba8f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_dyndns_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_services_481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_google_cloud_platform_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_customer_insight_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_customer_insight_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_businessman_filled_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_businessman_filled_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_admin_settings_male_filled_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_admin_settings_male_filled_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_key2_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-xanh-duong-cong-nghe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-xanh-duong-cong-nghe1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thiet-ke-poster-001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31b6e49574a04ef6a345be2eff556f3c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cd_642.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_label_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_google_cloud_platform_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_software_box_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_software_box_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_label_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_guest_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_services_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_google_calendar_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_google_calendar_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_ratings_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_money_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_video_playlist_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_key_exchange_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_system_task_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cd_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\70391807-two-steps-authentication-on-computer-login-and-password-verification-with-sms-on-smartphone-.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hand-typing-laptop-computer-with-password-login-screen_7190-2962.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hand-typing-laptop-computer-with-password-login-screen_7190-29621.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_self_service_kiosk_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_ratings_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_tag_window_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_google_calendar_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_system_task_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_self_service_kiosk_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh-meo-chap-tay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\75194016-close-up-of-login-page-against-businessman-using-a-laptop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1339-scaled.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1339-scaled1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1339-scaled2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\60230534-stock-vector-access-management-authorize-software-authentication-login-form-system-vector-illustration.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KycE8k.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\70391807-two-steps-authentication-on-computer-login-and-password-verification-with-sms-on-smartphone-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_connect_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_network_care_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_unavailable_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_guest_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_view_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_user_group_woman_man_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh-meo-chap-tay1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_change_employee_female_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_checked_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_engage_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_checked_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_male_user_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_male_user_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_checked_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_change_employee_female_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\141600.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flat,750x1000,075,f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_tag_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mugen_train_poster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_administrative_tools_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_file_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cd_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_data_recovery_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_renew_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_inspection_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\109222l.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\77123921dd5f589b1a8693e5e445ec1f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_businessman_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_exit_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_exit_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_apply_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_report_file_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_investment_portfolio_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_increase_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cd_322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_create_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_clapperboard_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_print_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_access_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_create_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_new_ticket_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eg-qxrvWoAIVt9I.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_property_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_close_pane_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_task_completed_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_inspection_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_unavailable_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_medium_risk_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_box_important_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_medium_risk_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_box_important_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_medium_risk_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUL\BUL.csproj">
+      <Project>{893f0640-76cc-42ca-97dd-3b262042e3b6}</Project>
+      <Name>BUL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{20f06ccf-968e-43a5-b36d-9abb013d3800}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_close_pane_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_card_payment_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_multiply_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_checkmark_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_checked_322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_inspection_322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_hand_with_pen_32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
